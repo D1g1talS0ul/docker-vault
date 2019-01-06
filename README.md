@@ -26,5 +26,6 @@ docker run -v /mnt/vault/:/vault/ -p 8200:8200 --cap-add IPC_LOCK -e 'VAULT_ADDR
 docker ps
 docker exec -it faf8e65d6e35    /bin/sh
 
-vault operator init
-vault operator unseal
+`vault operator init`
+
+`vault operator unseal`
