@@ -1,4 +1,4 @@
-mkdir -p /mnt/vault/config
+`mkdir -p /mnt/vault/config`
 
 edit /mnt/vault/config/config.hcl
 
@@ -19,12 +19,12 @@ storage "file" {
 }
 ```
   
-chmod -R 777 /mnt/vault
+`chmod -R 777 /mnt/vault`
 
-docker run -v /mnt/vault/:/vault/ -p 8200:8200 --cap-add IPC_LOCK -e 'VAULT_ADDR=http://127.0.0.1:8200' vault server
+`docker run -v /mnt/vault/:/vault/ -p 8200:8200 --cap-add IPC_LOCK -e 'VAULT_ADDR=http://127.0.0.1:8200' vault server`
 
-docker ps
-docker exec -it faf8e65d6e35    /bin/sh
+`docker ps` to get the container ID
+`docker exec -it faf8e65d6e35 /bin/sh`
 
 `vault operator init`
 
